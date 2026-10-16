@@ -46,6 +46,12 @@ svg.fill-current.h-8 {
 :has(> svg.fill-current.h-8.mb-6)::before {
   margin-bottom: 1.5rem;
 }
+/* The phone Live header centres its logo with absolute positioning; do the same for ours. */
+:has(> svg.fill-current.h-8.absolute)::before {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 /* Count bubble on the Alerts menu icon. */
 .sw-badge {
