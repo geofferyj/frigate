@@ -10,6 +10,7 @@ import { MdCategory, MdChat, MdVideoLibrary } from "react-icons/md";
 import { TbFaceId } from "react-icons/tb";
 import useSWR from "swr";
 import { useIsAdmin } from "./use-is-admin";
+import { useSiteWatchNav } from "@/site-watch/nav";
 
 export const ID_LIVE = 1;
 export const ID_REVIEW = 2;
@@ -27,6 +28,7 @@ export default function useNavigation(
     revalidateOnFocus: false,
   });
   const isAdmin = useIsAdmin();
+  const siteWatchItems = useSiteWatchNav(variant);
 
   const hasChatAgent = useMemo(
     () =>
@@ -99,7 +101,14 @@ export default function useNavigation(
           url: "/chat",
           enabled: isDesktop && isAdmin && hasChatAgent,
         },
+        ...siteWatchItems,
       ] as NavData[],
-    [config?.face_recognition?.enabled, hasChatAgent, variant, isAdmin],
+    [
+      config?.face_recognition?.enabled,
+      hasChatAgent,
+      variant,
+      isAdmin,
+      siteWatchItems,
+    ],
   );
 }

@@ -30,6 +30,8 @@ const Chat = lazy(() => import("@/pages/Chat"));
 const Logs = lazy(() => import("@/pages/Logs"));
 const AccessDenied = lazy(() => import("@/pages/AccessDenied"));
 const Replay = lazy(() => import("@/pages/Replay"));
+// Site Watch: our pages (alerts, attendance, rules, ...) live under src/site-watch/.
+const SiteWatch = lazy(() => import("@/site-watch"));
 
 function App() {
   const { data: config } = useSWR<FrigateConfig>("config", {
@@ -96,6 +98,7 @@ function DefaultAppView() {
               <Route path="/explore" element={<Explore />} />
               <Route path="/export" element={<Exports />} />
               <Route path="/settings" element={<Settings />} />
+              <Route path="/site-watch/*" element={<SiteWatch />} />
             </Route>
             <Route element={<ProtectedRoute requiredRoles={["admin"]} />}>
               <Route path="/system" element={<System />} />

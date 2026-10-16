@@ -1,0 +1,214 @@
+{
+  "brand": "Horus",
+  "section": "Site",
+  "nav": {
+    "alerts": "Alerts",
+    "site": "Site"
+  },
+  "tabs": {
+    "alerts": "Alerts",
+    "attendance": "Attendance",
+    "rules": "Rules",
+    "schedule": "Working hours",
+    "recipients": "Recipients",
+    "snoozes": "Snoozes"
+  },
+  "common": {
+    "save": "Save",
+    "saving": "Saving…",
+    "cancel": "Cancel",
+    "add": "Add",
+    "remove": "Remove",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "loading": "Loading…",
+    "allCameras": "All cameras",
+    "allRules": "All rules",
+    "anyZone": "Any zone",
+    "unknownPerson": "Unknown person",
+    "vehicle": "Vehicle",
+    "person": "Person",
+    "camera": "Camera",
+    "zone": "Zone",
+    "yes": "Yes",
+    "no": "No",
+    "saved": "Saved.",
+    "failed": "Could not save: {{error}}",
+    "loadFailed": "Could not load this page: {{error}}",
+    "adminOnly": "Only admins can change this.",
+    "untilRemoved": "Until removed"
+  },
+  "levels": {
+    "off": "Off",
+    "logged": "Log only",
+    "normal": "Alert",
+    "urgent": "Urgent alert"
+  },
+  "levelBadge": {
+    "normal": "Alert",
+    "urgent": "Urgent"
+  },
+  "rules": {
+    "names": {
+      "known_entered_left": "Known person comes or goes",
+      "unknown_entered": "Unknown person enters",
+      "restricted_zone": "Person in a restricted area",
+      "vehicle_at_gate": "Vehicle at the gate",
+      "loitering": "Person loitering",
+      "camera_offline": "Camera offline"
+    },
+    "intro": "What happens when something is seen. \"Log only\" keeps the event without sending anything. Working hours come from the Working hours tab; holidays count as after hours.",
+    "columns": {
+      "rule": "Rule",
+      "camera": "Camera",
+      "zone": "Zone",
+      "enabled": "On",
+      "working": "Working hours",
+      "after": "After hours"
+    },
+    "addOverride": "Add a camera rule",
+    "addOverrideDesc": "A rule for one camera (and optionally one zone) wins over the general rule.",
+    "overrideExists": "That rule already exists for this camera and zone.",
+    "removeOverride": "Remove this camera rule",
+    "saved": "Rules saved. They apply to the next event.",
+    "unsaved": "Unsaved changes"
+  },
+  "schedule": {
+    "intro": "Alerts use the working-hours level inside these times and the after-hours level outside them.",
+    "weekdays": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "columns": {
+      "day": "Day",
+      "working": "Working day",
+      "start": "Start",
+      "end": "End"
+    },
+    "holidays": "Holidays",
+    "holidaysIntro": "Holidays count as after hours all day.",
+    "holidayDate": "Date",
+    "holidayName": "Name",
+    "noHolidays": "No holidays set.",
+    "saved": "Working hours saved."
+  },
+  "recipients": {
+    "intro": "Who gets Telegram messages. Each person sends /start to the bot to get their chat id. Urgent alerts that nobody handles move to the next escalation step after the set number of minutes.",
+    "columns": {
+      "name": "Name",
+      "chatId": "Telegram chat id",
+      "minLevel": "Gets",
+      "order": "Escalation step",
+      "active": "Active"
+    },
+    "minLevel": {
+      "normal": "All alerts",
+      "urgent": "Urgent only"
+    },
+    "add": "Add recipient",
+    "edit": "Edit recipient",
+    "none": "No recipients yet. Alerts are only shown here until someone is added.",
+    "confirmDelete": "Remove {{name}} from the recipients?",
+    "chatIdHelp": "A number such as 123456789. Groups have a negative id."
+  },
+  "snoozes": {
+    "intro": "A snooze pauses alerts; events are still recorded. Remove a snooze to get alerts again.",
+    "columns": {
+      "camera": "Camera",
+      "rule": "Rule",
+      "until": "Until",
+      "by": "Set by"
+    },
+    "add": "Snooze alerts",
+    "duration": "For how long",
+    "durations": {
+      "30": "30 minutes",
+      "60": "1 hour",
+      "240": "4 hours",
+      "720": "12 hours",
+      "forever": "Until removed"
+    },
+    "none": "Nothing is snoozed.",
+    "created": "Snoozed."
+  },
+  "alerts": {
+    "status": {
+      "open": "Open",
+      "handled": "Handled",
+      "all": "All"
+    },
+    "level": {
+      "all": "All levels",
+      "urgent": "Urgent",
+      "normal": "Normal"
+    },
+    "none": "No alerts here.",
+    "noneOpen": "No open alerts.",
+    "handle": "Handled",
+    "handledBy": "Handled by {{name}}",
+    "notes": "Notes",
+    "addNote": "Add note",
+    "notePlaceholder": "What was done?",
+    "noNotes": "No notes yet.",
+    "viewClip": "View clip",
+    "markKnown": "Mark as known",
+    "markKnownTitle": "Who is this?",
+    "markKnownDesc": "The snapshot is added to Frigate's face library under this name. The next time this person is seen they are recognised.",
+    "markKnownName": "Name",
+    "markKnownDone": "Face registered as {{name}}.",
+    "face": {
+      "known": "{{name}}",
+      "unknown": "Unknown face",
+      "not_visible": "Face not visible"
+    },
+    "described": "Described by the vision model",
+    "fallback": "Facts only (vision model was unavailable)",
+    "escalated": "Escalated {{step}} time(s)",
+    "toast": {
+      "urgent": "Urgent: {{title}}",
+      "view": "View",
+      "handledOk": "Marked as handled.",
+      "noteOk": "Note added."
+    },
+    "liveOn": "Live updates on",
+    "liveOff": "Live updates reconnecting…"
+  },
+  "attendance": {
+    "intro": "Who came and went through the gate, from face recognition.",
+    "date": "Day",
+    "today": "Today",
+    "prev": "Previous day",
+    "next": "Next day",
+    "tiles": {
+      "people": "Known people seen",
+      "unknown": "Unknown visitors entered",
+      "alerts": "Alerts",
+      "alertsDetail": "{{urgent}} urgent, {{normal}} normal, {{open}} open",
+      "cameras": "Cameras online"
+    },
+    "people": "Known people",
+    "columns": {
+      "name": "Name",
+      "first": "First seen",
+      "last": "Last seen",
+      "in": "In",
+      "out": "Out"
+    },
+    "noPeople": "No known person was seen at the gate.",
+    "movements": "Gate crossings",
+    "noMovements": "No gate crossings recorded.",
+    "entered": "Entered",
+    "left": "Left",
+    "open": "Open",
+    "cameras": "Cameras",
+    "uptime": "{{pct}}% up",
+    "summary": "Daily summary message",
+    "summaryIntro": "This is the message recipients get at the end of the day."
+  }
+}

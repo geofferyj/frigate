@@ -1,0 +1,68 @@
+/* Horus branding on top of Frigate's default theme. Only CSS variables and a logo swap: Frigate's
+   own stylesheets and components are untouched. Scoped to Frigate's "default" colour scheme so the
+   other schemes in Settings keep their own accents. */
+
+/* Same convention as Frigate's theme files: the hsl() line is only an editor swatch, the bare
+   triple after it is what Tailwind uses (hsl(var(--x))), so the triple must come last. */
+:root.theme-default {
+  --selected: hsl(38, 92%, 50%); /* amber: active menu item, switches, selected buttons */
+  --selected: 38 92% 50%;
+  --selected-foreground: hsl(24, 10%, 10%);
+  --selected-foreground: 24 10% 10%;
+  --ring: hsl(38, 92%, 50%);
+  --ring: 38 92% 50%;
+}
+
+:root.theme-default.dark {
+  --selected: hsl(38, 92%, 55%);
+  --selected: 38 92% 55%;
+  --selected-foreground: hsl(24, 10%, 10%);
+  --selected-foreground: 24 10% 10%;
+  --ring: hsl(38, 92%, 55%);
+  --ring: 38 92% 55%;
+}
+
+/* Logo: Frigate draws its logo as an inline <svg class="fill-current mb-6 h-8 w-8"> in the sidebar
+   and on the login page. Hide it and draw ours on the parent element instead. */
+:has(> svg.fill-current.mb-6.h-8.w-8) > svg.fill-current.mb-6.h-8.w-8 {
+  display: none;
+}
+:has(> svg.fill-current.mb-6.h-8.w-8)::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 1.5rem;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M4 32c7-13 17-20 28-20s21 7 28 20c-7 13-17 20-28 20S11 45 4 32zm28-13a13 13 0 1 0 0 26 13 13 0 0 0 0-26zm0 6a7 7 0 1 1 0 14 7 7 0 0 1 0-14zm-5 23c2 6 1 10-4 14h8c3-4 3-9 1-14zm14 1c7 2 11 6 12 12-5-2-9-6-12-12z'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M4 32c7-13 17-20 28-20s21 7 28 20c-7 13-17 20-28 20S11 45 4 32zm28-13a13 13 0 1 0 0 26 13 13 0 0 0 0-26zm0 6a7 7 0 1 1 0 14 7 7 0 0 1 0-14zm-5 23c2 6 1 10-4 14h8c3-4 3-9 1-14zm14 1c7 2 11 6 12 12-5-2-9-6-12-12z'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+
+/* Count bubble on the Alerts menu icon. */
+.sw-badge {
+  position: absolute;
+  top: -0.45rem;
+  right: -0.55rem;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding: 0 0.3rem;
+  border-radius: 9999px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1.1rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* Horizontal tab row on phones. */
+.sw-tabs {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.sw-tabs::-webkit-scrollbar {
+  display: none;
+}
