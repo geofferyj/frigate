@@ -13,6 +13,7 @@ import { pageTitle } from "../branding";
 
 export type TabKey =
   | "alerts"
+  | "live"
   | "attendance"
   | "rules"
   | "schedule"
@@ -21,6 +22,7 @@ export type TabKey =
 
 const TABS: { key: TabKey; admin: boolean }[] = [
   { key: "alerts", admin: false },
+  { key: "live", admin: false },
   { key: "attendance", admin: false },
   { key: "rules", admin: true },
   { key: "schedule", admin: true },

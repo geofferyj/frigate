@@ -7,6 +7,7 @@
   },
   "tabs": {
     "alerts": "Alerts",
+    "live": "Live labels",
     "attendance": "Attendance",
     "rules": "Rules",
     "schedule": "Working hours",
@@ -210,5 +211,12 @@
     "uptime": "{{pct}}% up",
     "summary": "Daily summary message",
     "summaryIntro": "This is the message recipients get at the end of the day."
+  },
+  "live": {
+    "intro": "Every camera with a box around each person and vehicle Frigate is tracking right now. The label is the person's name when their face is recognised, otherwise \"person\" or \"car\", with the detection score. Click a camera to enlarge it. The picture is the detection stream (640×480, a few frames a second); use Live for full-quality video.",
+    "none": "No cameras are set up in Frigate.",
+    "enlarge": "Enlarge {{camera}}",
+    "shrink": "Back to all cameras",
+    "reconnecting": "Reconnecting…"
   }
 }

@@ -6,6 +6,7 @@ import "./i18n";
 
 const AlertsPage = lazy(() => import("./pages/Alerts"));
 const AttendancePage = lazy(() => import("./pages/Attendance"));
+const LiveLabelsPage = lazy(() => import("./pages/LiveLabels"));
 const RulesPage = lazy(() => import("./pages/Rules"));
 const SchedulePage = lazy(() => import("./pages/Schedule"));
 const RecipientsPage = lazy(() => import("./pages/Recipients"));
@@ -17,6 +18,7 @@ export default function SiteWatch() {
   return (
     <Routes>
       <Route path="alerts" element={<AlertsPage />} />
+      <Route path="live" element={<LiveLabelsPage />} />
       <Route path="attendance" element={<AttendancePage />} />
       <Route path="rules" element={<RulesPage />} />
       <Route path="schedule" element={<SchedulePage />} />
